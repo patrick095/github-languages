@@ -9,7 +9,7 @@
 * [Iniciar](#Iniciar)
 * [Pré-requesitos](#Pre-requesitos)
 * [Rotas](#Rotas)
-* [Tecnologias](#🛠Tecnologias)
+* [Tecnologias](#tecnologias)
 <!--te-->
 
 # Sobre
