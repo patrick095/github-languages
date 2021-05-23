@@ -9,7 +9,7 @@
 * [Iniciar](#Iniciar)
 * [Pré-requesitos](#Pre-requesitos)
 * [Rotas](#Rotas)
-* [Tecnologias](#Tecnologias)
+* [Tecnologias](#🛠Tecnologias)
 <!--te-->
 
 # Sobre
@@ -59,7 +59,7 @@ gerar novo token > digite sua senha (caso o github pedir) > e marque a opção r
     "HTML":"15.36%"
  } 
 ```
-# 🛠 Tecnologias
+# 🛠Tecnologias
 ### As seguintes tecnologias foram usadas no desenvolvimento desse projeto:
 
 - [NodeJS](https://nodejs.org/en/)
