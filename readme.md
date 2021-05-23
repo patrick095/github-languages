@@ -34,7 +34,7 @@
 ## Para calcular usando apenas repositórios públicos 
 
 ### Acessar rota "/user?user=SEU_USUÁRIO"
-- O github permite 60 conexões por hora, mas a api acessa uma vez a cada repositório seu
+- O github permite 60 conexões por hora para usuários sem autenticação, a api acessa uma vez a cada repositório seu para calcular mais detalhadamente cada linguagem usada.
 - A resposta será no formato json ex:
  ```json
  {
