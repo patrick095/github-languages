@@ -10,6 +10,7 @@
 * [Pré-requesitos](#Pre-requesitos)
 * [Rotas](#Rotas)
 * [Tecnologias](#tecnologias)
+* [Link para api no Heroku](https://git-languages.herokuapp.com/)
 <!--te-->
 
 # Sobre
