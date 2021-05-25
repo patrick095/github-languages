@@ -1,4 +1,5 @@
 const axios = require('axios');
+require('dotenv').config();
 
 module.exports = {
     async getAuthRepos(api){
@@ -21,19 +22,22 @@ module.exports = {
         .then(res => {return res.data})
         .catch(err => {return err});
     },
-    createAuthInstance(token = ''){
-        return axios.create({
-            baseURL:'https://api.github.com',
-            headers: {
-                'Authorization': `token ${token}`,
-                'X-OAuth-Scopes': 'repos, user',
-                'X-Accepted-OAuth-Scopes': 'user'
-            }
-        });
-    },
-    createInstance(){
-        return axios.create({
-            baseURL:'https://api.github.com'
-        });
+    createInstance(token = ''){
+        let getToken = (token !== '') ? token : process.env.GIT_TOKEN
+        if (token !== '' && !process.env.GIT_TOKEN) {
+            return axios.create({
+                baseURL:'https://api.github.com'
+            });
+        }
+        else {
+            return axios.create({
+                baseURL:'https://api.github.com',
+                headers: {
+                    'Authorization': `token ${getToken}`,
+                    'X-OAuth-Scopes': 'repos, user',
+                    'X-Accepted-OAuth-Scopes': 'user'
+                }
+            });
+        }
     }
 }
