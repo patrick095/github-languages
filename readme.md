@@ -34,8 +34,9 @@
 
 ## Para calcular usando apenas repositórios públicos 
 
-### Acessar rota "/user?user=SEU_USUÁRIO"
+### Acessar rota "/user?user=SEU_USUÁRIO&token=SEU_TOKEN_DE_ACESSO"
 - O github permite 60 conexões por hora para usuários sem autenticação, a api acessa uma vez a cada repositório seu para calcular mais detalhadamente cada linguagem usada.
+- Token opicional para essa rota, usar token caso acabe o limite padrão
 - A resposta será no formato json ex:
  ```json
  {
@@ -47,7 +48,7 @@
 
 ## Para calcular usando todos os seus repositórios (incluindo privados)
 
-### Acessar rota "/authuser?user=SEU_USUÁRIO&token=SEU_TOKEN_DE_ACESSO
+### Acessar rota "/authuser?user=SEU_USUÁRIO&token=SEU_TOKEN_DE_ACESSO"
 
 - Para gerar um token vá na página do github, vá em configurações > configurações do desenvolvedor > tokens de acesso pessoal > 
 gerar novo token > digite sua senha (caso o github pedir) > e marque a opção repo >  depois é só copiar o token.
@@ -60,6 +61,20 @@ gerar novo token > digite sua senha (caso o github pedir) > e marque a opção r
     "HTML":"15.36%"
  } 
 ```
+
+## Para descobrir o limit de consultas na api do github
+
+### Acessar a rota "/getlimit"
+
+#### A resposta será no formato json ex:
+ ```json
+ {
+    "limit":5000,
+    "remaining":4748,
+    "used":252
+ } 
+ ```
+
 # 🛠Tecnologias
 ### As seguintes tecnologias foram usadas no desenvolvimento desse projeto:
 
