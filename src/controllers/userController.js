@@ -4,8 +4,7 @@ const calcAllReposLanguages = require('./calcAllReposLanguages');
 module.exports = {
     async getAuthUserRepos(req, res) {
         const { user, token }= req.query;
-        const getToken = !token ? 'not valid' : token
-        const api = createInstance(getToken);
+        const api = createInstance(token);
         const repos = await getAuthRepos(api);
         if (repos.response) {
             //será chamado caso retorne o erro
